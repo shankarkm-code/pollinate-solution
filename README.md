@@ -1,7 +1,7 @@
 # pollinate-solution
 This repository is a solution for an assignment by pollinate
 
-use draw.io to connect to github and view the below to files.
+use draw.io to connect to github and view the below two files.
 
 1. Refer to ERD.io for the database model design
 
