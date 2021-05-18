@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: Pollinate AWS Lambda Transaction function.
+Resources:
+  transactionreport:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambda_function.fetch_transaction
+      Runtime: python3.8
+      CodeUri: .
+      Description: Pollinate AWS Lambda Transaction function.
+      MemorySize: 128
+      Timeout: 3
+      Role: >-
+        arn:aws:iam::881370326823:role/service-role/transaction_report-role-i99ov0nc
+      Events:
+        Api1:
+          Type: Api
+          Properties:
+            Path: /transaction_report
+            Method: ANY
